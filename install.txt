@@ -1,5 +1,9 @@
 sudo apt install acpi-call-dkms
 
+# needed?
+	cd asus-fan-control/src
+	cp data/models /usr/share/asus-fan-control
+
 # load acpi_call module on boot
 	sudo nano /etc/modules-load.d/modules.conf
 	# add line:
