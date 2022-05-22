@@ -1,0 +1,28 @@
+sudo apt install acpi-call-dkms
+
+# load acpi_call module on boot
+	sudo nano /etc/modules-load.d/modules.conf
+	# add line:
+		acpi_call
+
+# run asus-fan-control on boot
+	sudo nano /etc/rc.local
+	# add content:
+		#!/bin/sh -e
+		/home/olof/app/asus-fan-control/src/asus-fan-control
+		exit 0
+
+	sudo chmod +x /etc/rc.local
+
+
+
+# util
+
+	# loading acpi_call manually:
+	sudo modprobe acpi_call
+
+	# check that acpi_call is loaded
+	lsmod | grep acpi_call
+
+	# check syslog
+	grep asus /var/log/syslog

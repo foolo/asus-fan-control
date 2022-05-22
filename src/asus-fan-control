@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -o xtrace
+logger asus-fan-control run
 
 #-------------------------------------------------------------------------------
 # Copyright 2017-2022 Dominik Salvet
